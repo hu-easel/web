@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ErrorNotification from '../../fragments/ErrorNotification';
-import LoadingIndicator from '../../fragments/loadingIndicator/LoadingIndicator';
+import LoadingIndicator from '../../fragments/LoadingIndicator';
 
 export default function WithLoading (WrappedComponent) {
   return class extends Component {
@@ -34,4 +34,3 @@ export default function WithLoading (WrappedComponent) {
     }
   };
 }
-

@@ -49,6 +49,7 @@ export default class LoginForm extends Component {
               </div>
               <div className='field'>
                 <div className='control'>
+                  {isRequesting && <p>Logging in...</p>}
                   <button>Submit</button>
                 </div>
               </div>

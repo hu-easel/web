@@ -1,7 +1,8 @@
 import fetch from 'cross-fetch';
+import { API_URL } from './index';
 
 export async function login (username, password) {
-  let res = await fetch('http://localhost:8080/api/users/authentication/login', {
+  let res = await fetch(API_URL + '/api/users/authentication/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

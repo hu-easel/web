@@ -1,4 +1,4 @@
-import * as api from '../../../api';
+import api from '../../../api';
 import {setJwt} from '../jwt/actions';
 
 export const REQUEST_LOGIN_BEGIN = 'REQUEST_LOGIN_BEGIN';
