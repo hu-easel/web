@@ -1,12 +1,16 @@
 {
-  "name": "web",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.6.1",
-    "react-dom": "^16.6.1",
-    "react-scripts": "2.1.1"
+  "name": "easel-web",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hu-easel/web.git"
   },
+  "author": "Gabriel Foust, Jerred Shepherd",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/hu-easel/web/issues"
+  },
+  "homepage": "https://github.com/hu-easel/web#readme",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -21,5 +25,16 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "dependencies": {
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "react-scripts": "2.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-react-app": "^3.0.5",
+    "eslint-config-semistandard-react": "^4.2.0",
+    "semistandard": "^13.0.1"
+  }
 }
