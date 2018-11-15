@@ -10,7 +10,6 @@
   "bugs": {
     "url": "https://github.com/hu-easel/web/issues"
   },
-  "homepage": "https://github.com/hu-easel/web#readme",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
