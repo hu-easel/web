@@ -5,6 +5,7 @@ export default class Navbar extends Component {
   render () {
     return (
       <div>
+        <h1>EASEL</h1>
         <ul>
           <li>
             <Link to='/'>Home</Link>
