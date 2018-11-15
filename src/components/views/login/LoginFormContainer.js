@@ -14,7 +14,7 @@ const mapStateToProps = function (state) {
 const mapDispatchToProps = function (dispatch) {
   return {
     onRequest: (values, e, formApi) => {
-      dispatch(login(values.email, values.password));
+      dispatch(login(values.username, values.password));
     }
   };
 };
