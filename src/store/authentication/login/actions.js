@@ -5,12 +5,12 @@ export const REQUEST_LOGIN_BEGIN = 'REQUEST_LOGIN_BEGIN';
 export const REQUEST_LOGIN_SUCCESS = 'REQUEST_LOGIN_SUCCESS';
 export const REQUEST_LOGIN_ERROR = 'REQUEST_LOGIN_ERROR';
 
-export function login (email, password) {
+export function login (username, password) {
   return function (dispatch) {
     (async function () {
       dispatch(loginBegin());
       try {
-        let json = await api.authentication.login(email, password);
+        let json = await api.authentication.login(username, password);
         let token = json.token;
         dispatch(loginSuccess());
         dispatch(setJwt(token));
