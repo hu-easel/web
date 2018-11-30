@@ -1,6 +1,6 @@
 import connect from 'react-redux/es/connect/connect';
 import {fetchTermDetails} from '../../../store/terms/read/actions';
-import WithLoading from './WithLoadingIndicator';
+import WithLoadingIndicator from './WithLoadingIndicator';
 
 function WithRedux (WrappedComponent, id) {
   const mapStateToProps = function (state, props) {
@@ -36,7 +36,7 @@ function WithRedux (WrappedComponent, id) {
 
 export default function WithTerm (id) {
   return function (WrappedComponent) {
-    let ComponentWithLoading = WithLoading(WrappedComponent);
+    let ComponentWithLoading = WithLoadingIndicator(WrappedComponent);
     return WithRedux(ComponentWithLoading, id);
   };
 }

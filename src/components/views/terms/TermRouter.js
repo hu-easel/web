@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import TermList from './read/list/TermList';
 import CreateTerm from './read/create/CreateTerm';
 import PropTypes from 'prop-types';
+import TermListContainer from './read/list/TermListContainer';
 
 export class TermRouter extends Component {
   static propTypes = {
@@ -15,7 +15,7 @@ export class TermRouter extends Component {
       <Switch>
         <Route
           path={match.url}
-          component={TermList} exact />
+          component={TermListContainer} exact />
         <Route
           path={match.url + '/create'}
           component={CreateTerm} />

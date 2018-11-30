@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import ErrorNotification from '../../fragments/ErrorNotification';
 import LoadingIndicator from '../../fragments/LoadingIndicator';
 
-export default function WithLoading (WrappedComponent) {
+export default function WithLoadingIndicator (WrappedComponent) {
   return class extends Component {
     static propTypes = {
       isFetching: PropTypes.bool.isRequired,
