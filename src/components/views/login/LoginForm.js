@@ -53,12 +53,6 @@ export default class LoginForm extends Component {
                   <button>Submit</button>
                 </div>
               </div>
-              <div className='field is-grouped'>
-                <div className='control'>
-                  <Link className='button is-text'
-                    to='/login/help'>Trouble logging in?</Link>
-                </div>
-              </div>
             </form>
           )}
         </Form>

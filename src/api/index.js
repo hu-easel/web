@@ -1,5 +1,6 @@
 import * as authentication from './authentication';
 import * as terms from './terms';
+import fetch from 'cross-fetch';
 
 export const API_URL = process.env.REACT_APP_API_URL;
 
@@ -21,7 +22,7 @@ export async function processResponse (res) {
   }
 }
 
-export async function createRequest (options) {
+export function createRequest (options) {
   let request = {
     method: options.method || 'GET'
   };
@@ -29,7 +30,7 @@ export async function createRequest (options) {
     request = {
       ...request,
       headers: {
-        'Authorization': options.jwt,
+        'Authorization': 'Bearer ' + options.jwt,
         'Content-Type': 'application/json'
       }
     };
@@ -44,6 +45,8 @@ export async function createRequest (options) {
 }
 
 export async function fetchApi (path, options) {
-  const res = await fetch(API_URL + path, createRequest(options));
+  options = createRequest(options);
+  console.log(options);
+  const res = await fetch(API_URL + path, options);
   return processResponse(res);
 }

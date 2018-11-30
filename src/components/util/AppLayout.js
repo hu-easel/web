@@ -1,12 +1,12 @@
 import React from 'react';
-import Router from './Router';
-import Navbar from './Navbar';
+import NavbarContainer from './navbar/NabarContainer';
+import RouterContainer from './router/RouterContainer';
 
 export default function AppLayout () {
   return (
     <div>
-      <Navbar />
-      <Router />
+      <NavbarContainer />
+      <RouterContainer />
     </div>
   );
 }

@@ -1,8 +1,11 @@
 import {REMOVE_JWT, SET_JWT} from './actions';
 
 const initialState = {
-  token: null,
-  decoded: null
+  token: '',
+  decoded: {
+    username: ''
+  },
+  isLoggedIn: false
 };
 
 export default function jwtReducer (state = initialState, action) {
@@ -11,10 +14,16 @@ export default function jwtReducer (state = initialState, action) {
       return {
         ...state,
         token: action.token,
-        decoded: action.decoded
+        decoded: action.decoded,
+        isLoggedIn: true
       };
     case REMOVE_JWT:
-      return initialState;
+      return {
+        ...state,
+        token: action.token,
+        decoded: action.decoded,
+        isLoggedIn: false
+      };
     default:
       return state;
   }
